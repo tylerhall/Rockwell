@@ -14,9 +14,15 @@ static LocationManager *_me;
 
 - (id)init {
 	self = [super init];
+
+    bgTask = 0;
+    
 	self.manager = [[CLLocationManager alloc] init];
 	self.manager.delegate = self;
 	[self.manager startUpdatingLocation];
+    [self.manager startMonitoringSignificantLocationChanges];
+    
+    
 	return self;
 }
 
@@ -27,15 +33,42 @@ static LocationManager *_me;
 	return _me;
 }
 
-- (void)locationManager:(CLLocationManager *)theManager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    BOOL isInBackground = NO;
+    if ([UIApplication sharedApplication].applicationState == UIApplicationStateBackground) {
+        isInBackground = YES;
+    }
+
 	if(!self.hasFoundInitialLocation) {
         self.hasFoundInitialLocation = YES;
-		[[NSNotificationCenter defaultCenter] postNotificationName:@"FIRST_LOCATION" object:nil];
-        // NSLog(@"FIRST_LOCATION");
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"LM_FIRST_LOCATION" object:nil];
+        NSLog(@"LM_FIRST_LOCATION");
 	}
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"LOCATION_DID_UPDATE" object:nil];
-    // NSLog(@"LOCATION_DID_UPDATE");
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"LM_DID_UPDATE" object:nil];
+    NSLog(@"LM_DID_UPDATE");
+    
+    if(isInBackground) {
+        [self.manager startMonitoringSignificantLocationChanges];
+        [self sendBackgroundLocationToServer:[locations lastObject]];
+    }
+}
+
+- (void)sendBackgroundLocationToServer:(CLLocation *)location {
+    NSLog(@"LM_BACKGROUND");
+
+    bgTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:
+              ^{
+                  [[UIApplication sharedApplication] endBackgroundTask:bgTask];
+              }];
+
+    // Send position to server synchronously...
+    NSLog(@"Location: %f, %f", location.coordinate.latitude, location.coordinate.longitude);
+    
+    if(bgTask != UIBackgroundTaskInvalid) {
+        [[UIApplication sharedApplication] endBackgroundTask:bgTask];
+         bgTask = UIBackgroundTaskInvalid;
+    }
 }
 
 @end

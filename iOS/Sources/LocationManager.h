@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface LocationManager : NSObject <CLLocationManagerDelegate>
+@interface LocationManager : NSObject <CLLocationManagerDelegate> {
+    UIBackgroundTaskIdentifier bgTask;
+}
 
 @property (nonatomic, retain) CLLocationManager *manager;
 @property (assign) BOOL hasFoundInitialLocation;
