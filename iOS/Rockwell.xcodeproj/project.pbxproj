@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C604C287168C202500FD2CE0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C604C286168C202500FD2CE0 /* UIKit.framework */; };
+		C604C289168C202500FD2CE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C604C288168C202500FD2CE0 /* Foundation.framework */; };
+		C604C28B168C202500FD2CE0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C604C28A168C202500FD2CE0 /* CoreGraphics.framework */; };
+		C604C2C6168C218200FD2CE0 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = C604C2B6168C218200FD2CE0 /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C604C2C7168C218200FD2CE0 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = C604C2B8168C218200FD2CE0 /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C604C2C8168C218200FD2CE0 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = C604C2BA168C218200FD2CE0 /* SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C604C2C9168C218200FD2CE0 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = C604C2BC168C218200FD2CE0 /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C604C2CA168C218200FD2CE0 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C604C2BE168C218200FD2CE0 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C604C2CB168C218200FD2CE0 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = C604C2C0168C218200FD2CE0 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C604C2CC168C218200FD2CE0 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C604C2C3168C218200FD2CE0 /* TPKeyboardAvoidingScrollView.m */; };
+		C604C2CD168C218200FD2CE0 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C604C2C5168C218200FD2CE0 /* TPKeyboardAvoidingTableView.m */; };
+		C604C2D2168C219B00FD2CE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C604C2D0168C219B00FD2CE0 /* main.m */; };
+		C604C2DC168C21A100FD2CE0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C604C2D4168C21A100FD2CE0 /* Default-568h@2x.png */; };
+		C604C2DD168C21A100FD2CE0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C604C2D5168C21A100FD2CE0 /* Default.png */; };
+		C604C2DE168C21A100FD2CE0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C604C2D6168C21A100FD2CE0 /* Default@2x.png */; };
+		C604C2E0168C21A100FD2CE0 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C604C2D9168C21A100FD2CE0 /* MainStoryboard.storyboard */; };
+		C604C2E7168C21A600FD2CE0 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C604C2E4168C21A600FD2CE0 /* LocationManager.m */; };
+		C604C2E8168C21A600FD2CE0 /* RWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C604C2E6168C21A600FD2CE0 /* RWAppDelegate.m */; };
+		C604C2F9168C22C200FD2CE0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C604C2F7168C22B700FD2CE0 /* CoreLocation.framework */; };
+		C604C2FC168C231A00FD2CE0 /* RWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C604C2FB168C231A00FD2CE0 /* RWLoginViewController.m */; };
+		C604C2FF168C233100FD2CE0 /* RWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C604C2FE168C233100FD2CE0 /* RWMainViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C604C282168C202500FD2CE0 /* Rockwell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rockwell.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C604C286168C202500FD2CE0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C604C288168C202500FD2CE0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C604C28A168C202500FD2CE0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C604C2B4168C218200FD2CE0 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		C604C2B5168C218200FD2CE0 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		C604C2B6168C218200FD2CE0 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		C604C2B7168C218200FD2CE0 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		C604C2B8168C218200FD2CE0 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		C604C2B9168C218200FD2CE0 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		C604C2BA168C218200FD2CE0 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		C604C2BB168C218200FD2CE0 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		C604C2BC168C218200FD2CE0 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		C604C2BD168C218200FD2CE0 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		C604C2BE168C218200FD2CE0 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		C604C2BF168C218200FD2CE0 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		C604C2C0168C218200FD2CE0 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		C604C2C2168C218200FD2CE0 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		C604C2C3168C218200FD2CE0 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		C604C2C4168C218200FD2CE0 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		C604C2C5168C218200FD2CE0 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		C604C2D0168C219B00FD2CE0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C604C2D1168C219B00FD2CE0 /* Rockwell-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Rockwell-Prefix.pch"; sourceTree = "<group>"; };
+		C604C2D4168C21A100FD2CE0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C604C2D5168C21A100FD2CE0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C604C2D6168C21A100FD2CE0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C604C2D8168C21A100FD2CE0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C604C2DA168C21A100FD2CE0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		C604C2DB168C21A100FD2CE0 /* Rockwell-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Rockwell-Info.plist"; sourceTree = "<group>"; };
+		C604C2E3168C21A600FD2CE0 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		C604C2E4168C21A600FD2CE0 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		C604C2E5168C21A600FD2CE0 /* RWAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWAppDelegate.h; sourceTree = "<group>"; };
+		C604C2E6168C21A600FD2CE0 /* RWAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWAppDelegate.m; sourceTree = "<group>"; };
+		C604C2F7168C22B700FD2CE0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C604C2FA168C231A00FD2CE0 /* RWLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWLoginViewController.h; sourceTree = "<group>"; };
+		C604C2FB168C231A00FD2CE0 /* RWLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWLoginViewController.m; sourceTree = "<group>"; };
+		C604C2FD168C233100FD2CE0 /* RWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWMainViewController.h; sourceTree = "<group>"; };
+		C604C2FE168C233100FD2CE0 /* RWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWMainViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C604C27F168C202500FD2CE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C604C287168C202500FD2CE0 /* UIKit.framework in Frameworks */,
+				C604C289168C202500FD2CE0 /* Foundation.framework in Frameworks */,
+				C604C28B168C202500FD2CE0 /* CoreGraphics.framework in Frameworks */,
+				C604C2F9168C22C200FD2CE0 /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C604C277168C202500FD2CE0 = {
+			isa = PBXGroup;
+			children = (
+				C604C2CE168C219600FD2CE0 /* Models */,
+				C604C2E2168C21A600FD2CE0 /* Sources */,
+				C604C2EA168C21B000FD2CE0 /* View Controllers */,
+				C604C2E9168C21AB00FD2CE0 /* UI */,
+				C604C2D3168C21A100FD2CE0 /* Resources */,
+				C604C2CF168C219B00FD2CE0 /* Other Sources */,
+				C604C2B2168C218200FD2CE0 /* 3rd Party */,
+				C604C285168C202500FD2CE0 /* Frameworks */,
+				C604C283168C202500FD2CE0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C604C283168C202500FD2CE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C604C282168C202500FD2CE0 /* Rockwell.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C604C285168C202500FD2CE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C604C2F7168C22B700FD2CE0 /* CoreLocation.framework */,
+				C604C286168C202500FD2CE0 /* UIKit.framework */,
+				C604C288168C202500FD2CE0 /* Foundation.framework */,
+				C604C28A168C202500FD2CE0 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C604C2B2168C218200FD2CE0 /* 3rd Party */ = {
+			isa = PBXGroup;
+			children = (
+				C604C2B3168C218200FD2CE0 /* JSON */,
+				C604C2C1168C218200FD2CE0 /* TPKeyboardAvoiding */,
+			);
+			path = "3rd Party";
+			sourceTree = "<group>";
+		};
+		C604C2B3168C218200FD2CE0 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				C604C2B4168C218200FD2CE0 /* JSON.h */,
+				C604C2B5168C218200FD2CE0 /* NSObject+SBJSON.h */,
+				C604C2B6168C218200FD2CE0 /* NSObject+SBJSON.m */,
+				C604C2B7168C218200FD2CE0 /* NSString+SBJSON.h */,
+				C604C2B8168C218200FD2CE0 /* NSString+SBJSON.m */,
+				C604C2B9168C218200FD2CE0 /* SBJSON.h */,
+				C604C2BA168C218200FD2CE0 /* SBJSON.m */,
+				C604C2BB168C218200FD2CE0 /* SBJsonBase.h */,
+				C604C2BC168C218200FD2CE0 /* SBJsonBase.m */,
+				C604C2BD168C218200FD2CE0 /* SBJsonParser.h */,
+				C604C2BE168C218200FD2CE0 /* SBJsonParser.m */,
+				C604C2BF168C218200FD2CE0 /* SBJsonWriter.h */,
+				C604C2C0168C218200FD2CE0 /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		C604C2C1168C218200FD2CE0 /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				C604C2C2168C218200FD2CE0 /* TPKeyboardAvoidingScrollView.h */,
+				C604C2C3168C218200FD2CE0 /* TPKeyboardAvoidingScrollView.m */,
+				C604C2C4168C218200FD2CE0 /* TPKeyboardAvoidingTableView.h */,
+				C604C2C5168C218200FD2CE0 /* TPKeyboardAvoidingTableView.m */,
+			);
+			path = TPKeyboardAvoiding;
+			sourceTree = "<group>";
+		};
+		C604C2CE168C219600FD2CE0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C604C2CF168C219B00FD2CE0 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C604C2D0168C219B00FD2CE0 /* main.m */,
+				C604C2D1168C219B00FD2CE0 /* Rockwell-Prefix.pch */,
+			);
+			path = "Other Sources";
+			sourceTree = "<group>";
+		};
+		C604C2D3168C21A100FD2CE0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C604C2D4168C21A100FD2CE0 /* Default-568h@2x.png */,
+				C604C2D5168C21A100FD2CE0 /* Default.png */,
+				C604C2D6168C21A100FD2CE0 /* Default@2x.png */,
+				C604C2D7168C21A100FD2CE0 /* InfoPlist.strings */,
+				C604C2D9168C21A100FD2CE0 /* MainStoryboard.storyboard */,
+				C604C2DB168C21A100FD2CE0 /* Rockwell-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C604C2E2168C21A600FD2CE0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C604C2E5168C21A600FD2CE0 /* RWAppDelegate.h */,
+				C604C2E6168C21A600FD2CE0 /* RWAppDelegate.m */,
+				C604C2E3168C21A600FD2CE0 /* LocationManager.h */,
+				C604C2E4168C21A600FD2CE0 /* LocationManager.m */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C604C2E9168C21AB00FD2CE0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C604C2EA168C21B000FD2CE0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C604C2FA168C231A00FD2CE0 /* RWLoginViewController.h */,
+				C604C2FB168C231A00FD2CE0 /* RWLoginViewController.m */,
+				C604C2FD168C233100FD2CE0 /* RWMainViewController.h */,
+				C604C2FE168C233100FD2CE0 /* RWMainViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C604C281168C202500FD2CE0 /* Rockwell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C604C2A6168C202600FD2CE0 /* Build configuration list for PBXNativeTarget "Rockwell" */;
+			buildPhases = (
+				C604C27E168C202500FD2CE0 /* Sources */,
+				C604C27F168C202500FD2CE0 /* Frameworks */,
+				C604C280168C202500FD2CE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rockwell;
+			productName = Rockwell;
+			productReference = C604C282168C202500FD2CE0 /* Rockwell.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C604C279168C202500FD2CE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RW;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Click On Tyler";
+			};
+			buildConfigurationList = C604C27C168C202500FD2CE0 /* Build configuration list for PBXProject "Rockwell" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C604C277168C202500FD2CE0;
+			productRefGroup = C604C283168C202500FD2CE0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C604C281168C202500FD2CE0 /* Rockwell */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C604C280168C202500FD2CE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C604C2DC168C21A100FD2CE0 /* Default-568h@2x.png in Resources */,
+				C604C2DD168C21A100FD2CE0 /* Default.png in Resources */,
+				C604C2DE168C21A100FD2CE0 /* Default@2x.png in Resources */,
+				C604C2E0168C21A100FD2CE0 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C604C27E168C202500FD2CE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C604C2C6168C218200FD2CE0 /* NSObject+SBJSON.m in Sources */,
+				C604C2C7168C218200FD2CE0 /* NSString+SBJSON.m in Sources */,
+				C604C2C8168C218200FD2CE0 /* SBJSON.m in Sources */,
+				C604C2C9168C218200FD2CE0 /* SBJsonBase.m in Sources */,
+				C604C2CA168C218200FD2CE0 /* SBJsonParser.m in Sources */,
+				C604C2CB168C218200FD2CE0 /* SBJsonWriter.m in Sources */,
+				C604C2CC168C218200FD2CE0 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				C604C2CD168C218200FD2CE0 /* TPKeyboardAvoidingTableView.m in Sources */,
+				C604C2D2168C219B00FD2CE0 /* main.m in Sources */,
+				C604C2E7168C21A600FD2CE0 /* LocationManager.m in Sources */,
+				C604C2E8168C21A600FD2CE0 /* RWAppDelegate.m in Sources */,
+				C604C2FC168C231A00FD2CE0 /* RWLoginViewController.m in Sources */,
+				C604C2FF168C233100FD2CE0 /* RWMainViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C604C2D7168C21A100FD2CE0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C604C2D8168C21A100FD2CE0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C604C2D9168C21A100FD2CE0 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C604C2DA168C21A100FD2CE0 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C604C2A4168C202600FD2CE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C604C2A5168C202600FD2CE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C604C2A7168C202600FD2CE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Other Sources/Rockwell-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Rockwell-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C604C2A8168C202600FD2CE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Other Sources/Rockwell-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Rockwell-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C604C27C168C202500FD2CE0 /* Build configuration list for PBXProject "Rockwell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C604C2A4168C202600FD2CE0 /* Debug */,
+				C604C2A5168C202600FD2CE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C604C2A6168C202600FD2CE0 /* Build configuration list for PBXNativeTarget "Rockwell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C604C2A7168C202600FD2CE0 /* Debug */,
+				C604C2A8168C202600FD2CE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C604C279168C202500FD2CE0 /* Project object */;
+}
