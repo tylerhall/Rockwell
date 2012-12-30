@@ -39,4 +39,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(indexPath.section == 2) {
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/tylerhall/Rockwell"]];
+    }
+}
+
 @end

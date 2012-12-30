@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RWMainViewController : UIViewController
+@interface RWMainViewController : UITableViewController
 
 @end

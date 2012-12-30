@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RWLoginViewController : UITableViewController
+@interface RWLoginViewController : UITableViewController {
+    IBOutlet UITextField *_txtUsername;
+    IBOutlet UITextField *_txtPassword;
+    IBOutlet UITextField *_txtURL;
+}
 
 @end
