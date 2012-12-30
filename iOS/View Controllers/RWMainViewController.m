@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    _switchUpdateLocation.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"updateLocation"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -37,6 +37,24 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(indexPath.section == 1) {
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
+}
+
+- (IBAction)logout:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"token"];
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"updateLocation"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (IBAction)updateLocationChanged:(id)sender {
+    [[NSUserDefaults standardUserDefaults] setBool:_switchUpdateLocation.on forKey:@"updateLocation"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 @end
