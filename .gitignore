@@ -16,3 +16,5 @@ profile
 *.moved-aside
 DerivedData
 .idea/
+# www
+class.config.php
