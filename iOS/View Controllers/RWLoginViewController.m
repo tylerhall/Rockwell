@@ -29,25 +29,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _txtUsername.text = [[NSUserDefaults standardUserDefaults] valueForKey:@"username"];
-    _txtPassword.text = @"";
-    _txtURL.text = [[NSUserDefaults standardUserDefaults] valueForKey:@"url"];
-    _firstAppearance = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.navigationController setNavigationBarHidden:YES animated:animated];
+    _txtUsername.text = [[NSUserDefaults standardUserDefaults] valueForKey:@"username"];
+    _txtPassword.text = @"";
+    _txtURL.text = [[NSUserDefaults standardUserDefaults] valueForKey:@"url"];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    if(_firstAppearance) {
-        if([[NSUserDefaults standardUserDefaults] valueForKey:@"token"]) {
-            RWMainViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainNavigationController"];
-            vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-            [self presentViewController:vc animated:NO completion:nil];
-        }
+    if([[NSUserDefaults standardUserDefaults] valueForKey:@"token"]) {
+        RWMainViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainNavigationController"];
+        vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        [self presentViewController:vc animated:NO completion:nil];
     }
-    _firstAppearance = NO;
 }
 
 - (void)didReceiveMemoryWarning

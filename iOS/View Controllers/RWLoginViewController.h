@@ -12,8 +12,6 @@
     IBOutlet UITextField *_txtUsername;
     IBOutlet UITextField *_txtPassword;
     IBOutlet UITextField *_txtURL;
-    
-    BOOL _firstAppearance;
 }
 
 - (void)login;
