@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RWMainViewController : UITableViewController
+@interface RWMainViewController : UITableViewController {
+    IBOutlet UISwitch *_switchUpdateLocation;
+}
 
 - (IBAction)logout:(id)sender;
 

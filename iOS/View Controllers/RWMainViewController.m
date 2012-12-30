@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    _switchUpdateLocation.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"updateLocation"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -48,6 +48,12 @@
 - (IBAction)logout:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
     [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"token"];
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"updateLocation"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (IBAction)updateLocationChanged:(id)sender {
+    [[NSUserDefaults standardUserDefaults] setBool:_switchUpdateLocation.on forKey:@"updateLocation"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 

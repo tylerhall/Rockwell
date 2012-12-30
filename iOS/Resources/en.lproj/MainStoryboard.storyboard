@@ -44,9 +44,12 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="bhH-fh-Ztl">
+                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="bhH-fh-Ztl">
                                                     <rect key="frame" x="203" y="8" width="79" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="updateLocationChanged:" destination="G3U-gd-XZI" eventType="valueChanged" id="Nms-Lg-xP6"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -107,6 +110,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="_switchUpdateLocation" destination="bhH-fh-Ztl" id="DYi-AX-cEU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XU6-SU-EbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -273,6 +279,8 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RWMainViewController.h"/>
             <relationships>
                 <relationship kind="action" name="logout:"/>
+                <relationship kind="action" name="updateLocationChanged:"/>
+                <relationship kind="outlet" name="_switchUpdateLocation" candidateClass="UISwitch"/>
             </relationships>
         </class>
         <class className="TPKeyboardAvoidingTableView" superclassName="UITableView">
