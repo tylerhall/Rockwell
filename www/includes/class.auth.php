@@ -169,6 +169,7 @@
             $u->username = $username;
             $u->nid = self::newNid();
             $u->password = self::hashedPassword($password);
+			$u->token = self::newNid();
             $u->insert();
             return $u;
         }
