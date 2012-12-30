@@ -10,4 +10,6 @@
 
 @interface RWMainViewController : UITableViewController
 
+- (IBAction)logout:(id)sender;
+
 @end

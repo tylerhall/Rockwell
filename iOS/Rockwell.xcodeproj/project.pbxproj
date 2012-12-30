@@ -28,6 +28,8 @@
 		C604C2F9168C22C200FD2CE0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C604C2F7168C22B700FD2CE0 /* CoreLocation.framework */; };
 		C604C2FC168C231A00FD2CE0 /* RWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C604C2FB168C231A00FD2CE0 /* RWLoginViewController.m */; };
 		C604C2FF168C233100FD2CE0 /* RWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C604C2FE168C233100FD2CE0 /* RWMainViewController.m */; };
+		C6A93A0916901FAB0072502C /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A93A0816901FAB0072502C /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C6A93A17169020B90072502C /* NetworkSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A93A16169020B90072502C /* NetworkSpinner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +71,10 @@
 		C604C2FB168C231A00FD2CE0 /* RWLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWLoginViewController.m; sourceTree = "<group>"; };
 		C604C2FD168C233100FD2CE0 /* RWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWMainViewController.h; sourceTree = "<group>"; };
 		C604C2FE168C233100FD2CE0 /* RWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWMainViewController.m; sourceTree = "<group>"; };
+		C6A93A0716901FAB0072502C /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
+		C6A93A0816901FAB0072502C /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
+		C6A93A15169020B90072502C /* NetworkSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkSpinner.h; sourceTree = "<group>"; };
+		C6A93A16169020B90072502C /* NetworkSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkSpinner.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,7 @@
 		C604C2B2168C218200FD2CE0 /* 3rd Party */ = {
 			isa = PBXGroup;
 			children = (
+				C6A93A0616901FAB0072502C /* gtm-http-fetcher */,
 				C604C2B3168C218200FD2CE0 /* JSON */,
 				C604C2C1168C218200FD2CE0 /* TPKeyboardAvoiding */,
 			);
@@ -192,10 +199,9 @@
 		C604C2E2168C21A600FD2CE0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C6A93A14169020A40072502C /* Singletons */,
 				C604C2E5168C21A600FD2CE0 /* RWAppDelegate.h */,
 				C604C2E6168C21A600FD2CE0 /* RWAppDelegate.m */,
-				C604C2E3168C21A600FD2CE0 /* LocationManager.h */,
-				C604C2E4168C21A600FD2CE0 /* LocationManager.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -216,6 +222,26 @@
 				C604C2FE168C233100FD2CE0 /* RWMainViewController.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C6A93A0616901FAB0072502C /* gtm-http-fetcher */ = {
+			isa = PBXGroup;
+			children = (
+				C6A93A0716901FAB0072502C /* GTMHTTPFetcher.h */,
+				C6A93A0816901FAB0072502C /* GTMHTTPFetcher.m */,
+			);
+			path = "gtm-http-fetcher";
+			sourceTree = "<group>";
+		};
+		C6A93A14169020A40072502C /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				C604C2E3168C21A600FD2CE0 /* LocationManager.h */,
+				C604C2E4168C21A600FD2CE0 /* LocationManager.m */,
+				C6A93A15169020B90072502C /* NetworkSpinner.h */,
+				C6A93A16169020B90072502C /* NetworkSpinner.m */,
+			);
+			name = Singletons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +323,8 @@
 				C604C2E8168C21A600FD2CE0 /* RWAppDelegate.m in Sources */,
 				C604C2FC168C231A00FD2CE0 /* RWLoginViewController.m in Sources */,
 				C604C2FF168C233100FD2CE0 /* RWMainViewController.m in Sources */,
+				C6A93A0916901FAB0072502C /* GTMHTTPFetcher.m in Sources */,
+				C6A93A17169020B90072502C /* NetworkSpinner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

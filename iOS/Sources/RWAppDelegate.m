@@ -8,6 +8,7 @@
 
 #import "RWAppDelegate.h"
 #import "LocationManager.h"
+#import "RWMainViewController.h"
 
 @implementation RWAppDelegate
 

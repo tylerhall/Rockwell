@@ -39,4 +39,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(indexPath.section == 1) {
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
+}
+
+- (IBAction)logout:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"token"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 @end
