@@ -1,6 +1,16 @@
 <?PHP
 	require 'includes/master.inc.php';
 	$Auth->requireUser();
+
+	$accuracy_text = array(0 => 'coordinates', 10 => 'city', 20 => 'state', 30 => 'country');
+	$shares = DBObject::glob('share', 'SELECT * FROM shares WHERE user_id = ' . $Auth->id);
+	
+	if(isset($_GET['delete_share']))
+	{
+		$s = new Share($_GET['delete_share']);
+		$s->delete();
+		redirect('index.php');
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,14 +28,13 @@
 	</ul>
 
 	<h2>Share Your Current Location</h2>
-	<p><em>This section isn't working yet.</em></p>
 	<form action="share.php" method="POST">
 		<p>Accuracy:
 			<select name="accuracy" id="accuracy">
-				<option value="coordinates">Coordinates</option>
-				<option value="city">City</option>
-				<option value="state">State / Territory</option>
-				<option value="country">Country</option>
+				<option value="0">Coordinates</option>
+				<option value="10">City</option>
+				<option value="20">State / Territory</option>
+				<option value="30">Country</option>
 			</select>
 		</p>
 		<p>Format:
@@ -45,8 +54,20 @@
 				<td><strong>Accuracy</strong></td>
 				<td><strong>Format</strong></td>
 				<td><strong>Created</strong></td>
+				<td>&nbsp;</td>
 			</tr>
 		</thead>
+		<tbody>
+			<?PHP foreach($shares as $s) : ?>
+			<tr>
+				<td><?PHP echo $s->nickname; ?></td>
+				<td><?PHP echo $accuracy_text[$s->accuracy]; ?></td>
+				<td><?PHP echo $s->format; ?></td>
+				<td><?PHP echo $s->dt; ?></td>
+				<td><a href="index.php?delete_share=<?PHP echo $s->id; ?>">Delete</a></td>
+			</tr>
+			<?PHP endforeach; ?>
+		</tbody>
 	</table>
 </body>
 </html>
