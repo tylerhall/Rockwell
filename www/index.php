@@ -60,7 +60,7 @@
 		<tbody>
 			<?PHP foreach($shares as $s) : ?>
 			<tr>
-				<td><?PHP echo $s->nickname; ?></td>
+				<td><a href="share.php?id=<?PHP echo $s->slug; ?>"><?PHP echo $s->nickname; ?></a></td>
 				<td><?PHP echo $accuracy_text[$s->accuracy]; ?></td>
 				<td><?PHP echo $s->format; ?></td>
 				<td><?PHP echo $s->dt; ?></td>
