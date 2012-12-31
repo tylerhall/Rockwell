@@ -22,7 +22,7 @@
 <head>
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKfrkBYBGuh_YVnxxXWUd7yribyiPuLLc&sensor=false"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<?PHP echo Config::get('googleMapsKey'); ?>&sensor=false"></script>
 	<script type="text/javascript" src="js/rockwell.js"></script>
 	<script type="text/javascript">
 		function reloadData() {

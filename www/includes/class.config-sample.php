@@ -38,6 +38,7 @@
 
         // Add your config options here...
         public $useDBSessions; // Set to true to store sessions in the database
+		public $googleMapsKey;
 
         // Singleton constructor
         private function __construct()
@@ -101,6 +102,8 @@
             $this->dbWritePassword = '';
             $this->dbOnError       = 'die';
             $this->dbEmailOnError  = false;
+
+			$this->googleMapsKey   = '';
         }
 
         // Add code/variables to be run only on staging servers

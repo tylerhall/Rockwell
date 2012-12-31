@@ -18,7 +18,8 @@
 	</ul>
 
 	<h2>Share Your Current Location</h2>
-	<form action="index.php" method="POST">
+	<p><em>This section isn't working yet.</em></p>
+	<form action="share.php" method="POST">
 		<p>Accuracy:
 			<select name="accuracy" id="accuracy">
 				<option value="coordinates">Coordinates</option>
