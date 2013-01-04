@@ -306,7 +306,7 @@
         $day_dd .= "</select>";
 
         $year_dd = "<select name='{$prefix}year' id='{$prefix}year'>";
-        for($i = date('Y'); $i < date('Y') + 10; $i++)
+        for($i = date('Y') - 10; $i < date('Y') + 10; $i++)
         {
             $selected = ($yval == $i) ? ' selected="selected"' : '';
             $year_dd .= "<option value='$i'$selected>$i</option>";

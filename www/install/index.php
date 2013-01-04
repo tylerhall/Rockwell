@@ -5,7 +5,7 @@
 		$db = Database::getDatabase();
 		$username = $db->escape($_POST['username']);
 		Auth::createNewUser($username, $_POST['password']);
-		die('All done. You can now delete the <strong><code>install</code></strong> directory.');
+		die('All done. You can now delete the <strong><code>install</code></strong> directory. Go <a href="../index.php">here</a> to login.');
 	}
 ?>
 <h1>Rockwell Install</h1>
@@ -28,6 +28,11 @@
     $this->dbReadPassword  = 'your-password';
     $this->dbWritePassword = 'your-password';
 </pre>
+
+<p>You'll also need to sign-up for and get your own Google Maps v3 API key. Once you get that, add it to your config file right below your database settings. It looks like...</p>
+
+<pre>    $this->googleMapsKey   = 'some-long-ugly-api-key';</pre>
+
 
 <h2>Step 4</h2>
 <p>Fill in the form below and click submit to create your first user.</p>

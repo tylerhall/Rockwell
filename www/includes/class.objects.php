@@ -16,3 +16,11 @@
             parent::__construct('updates', array('user_id', 'dt', 'latitude', 'longitude'), $id);
         }
     }
+
+    class Share extends DBObject
+    {
+        public function __construct($id = null)
+        {
+            parent::__construct('shares', array('user_id', 'slug', 'nickname', 'format', 'accuracy', 'dt'), $id);
+        }
+    }
