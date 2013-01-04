@@ -341,7 +341,7 @@ static NSString *const kCallbackError = @"error";
 #if DEBUG && TARGET_OS_IPHONE
   BOOL isPreIOS6 = (NSFoundationVersionNumber <= 890.1);
   if (isPreIOS6 && delegateQueue) {
-    NSLog(@"GTMHTTPFetcher delegateQueue not safe in iOS 5");
+    DLog(@"GTMHTTPFetcher delegateQueue not safe in iOS 5");
   }
 #endif
 
@@ -1714,7 +1714,7 @@ void GTMAssertSelectorNilOrImplementedWithArgs(id obj, SEL sel, ...) {
   if (obj && sel) {
     // Check that the selector is implemented
     if (![obj respondsToSelector:sel]) {
-      NSLog(@"\"%@\" selector \"%@\" is unimplemented or misnamed",
+      DLog(@"\"%@\" selector \"%@\" is unimplemented or misnamed",
                              NSStringFromClass([obj class]),
                              NSStringFromSelector(sel));
       NSCAssert(0, @"callback selector unimplemented or misnamed");
@@ -1730,7 +1730,7 @@ void GTMAssertSelectorNilOrImplementedWithArgs(id obj, SEL sel, ...) {
           const char *foundArgType = [sig getArgumentTypeAtIndex:argCount];
 
           if(0 != strncmp(foundArgType, expectedArgType, strlen(expectedArgType))) {
-            NSLog(@"\"%@\" selector \"%@\" argument %d should be type %s",
+            DLog(@"\"%@\" selector \"%@\" argument %d should be type %s",
                   NSStringFromClass([obj class]),
                   NSStringFromSelector(sel), (argCount - 2), expectedArgType);
             NSCAssert(0, @"callback selector argument type mistake");
@@ -1741,7 +1741,7 @@ void GTMAssertSelectorNilOrImplementedWithArgs(id obj, SEL sel, ...) {
 
       // Check that the proper number of arguments are present in the selector
       if (argCount != [sig numberOfArguments]) {
-        NSLog( @"\"%@\" selector \"%@\" should have %d arguments",
+        DLog( @"\"%@\" selector \"%@\" should have %d arguments",
                        NSStringFromClass([obj class]),
                        NSStringFromSelector(sel), (argCount - 2));
         NSCAssert(0, @"callback selector arguments incorrect");

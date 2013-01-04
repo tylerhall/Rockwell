@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="VWt-Ge-Fz7">
+                            <tableViewSection footerTitle="When on, Rockwell will continue to update your location even after exiting the app." id="VWt-Ge-Fz7">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Hzx-Xo-0F4">
                                         <rect key="frame" x="0.0" y="10" width="320" height="46"/>
@@ -60,7 +60,7 @@
                             <tableViewSection headerTitle="Search Location History" id="f8x-29-v22">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="1hd-nt-k00">
-                                        <rect key="frame" x="0.0" y="102" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="152" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
@@ -78,7 +78,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="IVl-bR-Twf">
-                                        <rect key="frame" x="0.0" y="147" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="197" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
