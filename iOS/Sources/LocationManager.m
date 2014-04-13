@@ -7,6 +7,7 @@
 //
 
 #import "LocationManager.h"
+#import "GTMHTTPFetcher.h"
 
 static LocationManager *_me;
 
@@ -19,7 +20,7 @@ static LocationManager *_me;
     
 	self.manager = [[CLLocationManager alloc] init];
 	self.manager.delegate = self;
-	[self.manager startUpdatingLocation];
+	// [self.manager startUpdatingLocation];
     [self.manager startMonitoringSignificantLocationChanges];
     
     
@@ -42,11 +43,11 @@ static LocationManager *_me;
 	if(!self.hasFoundInitialLocation) {
         self.hasFoundInitialLocation = YES;
 		[[NSNotificationCenter defaultCenter] postNotificationName:@"LM_FIRST_LOCATION" object:nil];
-        NSLog(@"LM_FIRST_LOCATION");
+        DLog(@"LM_FIRST_LOCATION");
 	}
-    
+
     [[NSNotificationCenter defaultCenter] postNotificationName:@"LM_DID_UPDATE" object:nil];
-    NSLog(@"LM_DID_UPDATE");
+    DLog(@"LM_DID_UPDATE");
     
     if(isInBackground) {
         [self.manager startMonitoringSignificantLocationChanges];
@@ -55,16 +56,30 @@ static LocationManager *_me;
 }
 
 - (void)sendBackgroundLocationToServer:(CLLocation *)location {
-    NSLog(@"LM_BACKGROUND");
+    DLog(@"LM_BACKGROUND");
 
     bgTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:
               ^{
                   [[UIApplication sharedApplication] endBackgroundTask:bgTask];
               }];
 
-    // Send position to server synchronously...
-    NSLog(@"Location: %f, %f", location.coordinate.latitude, location.coordinate.longitude);
-    
+    // Send position to server synchronously since we won't block any UI in the background...
+    if([[NSUserDefaults standardUserDefaults] valueForKey:@"token"]) {
+        if([[NSUserDefaults standardUserDefaults] boolForKey:@"updateLocation"]) {
+            DLog(@"Location: %f, %f", location.coordinate.latitude, location.coordinate.longitude);
+
+            NSString *url_string = [NSString stringWithFormat:@"%@/api.php?action=update&token=%@&latitude=%f&longitude=%f",
+                                    [[NSUserDefaults standardUserDefaults] valueForKey:@"url"],
+                                    [[NSUserDefaults standardUserDefaults] valueForKey:@"token"],
+                                    location.coordinate.latitude,
+                                    location.coordinate.longitude];
+            DLog(@"%@", url_string);
+            NSURL *url = [NSURL URLWithString:url_string];
+            NSURLRequest *request = [NSURLRequest requestWithURL:url];
+            [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+        }
+    }
+
     if(bgTask != UIBackgroundTaskInvalid) {
         [[UIApplication sharedApplication] endBackgroundTask:bgTask];
          bgTask = UIBackgroundTaskInvalid;
