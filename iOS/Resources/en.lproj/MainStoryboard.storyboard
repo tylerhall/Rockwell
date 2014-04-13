@@ -46,7 +46,7 @@
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="bhH-fh-Ztl">
-                                                    <rect key="frame" x="203" y="8" width="51" height="31"/>
+                                                    <rect key="frame" x="251" y="6" width="51" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
                                                         <action selector="updateLocationChanged:" destination="G3U-gd-XZI" eventType="valueChanged" id="Nms-Lg-xP6"/>
@@ -119,6 +119,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="vf3-sv-Qns" kind="push" id="10U-qj-yVE"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Qia-Ls-ZbU">
                                         <rect key="frame" x="0.0" y="415" width="320" height="44"/>
@@ -136,6 +139,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="N6z-8P-T6L" kind="push" id="eEF-jk-4fu"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -159,6 +165,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XU6-SU-EbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1044" y="370"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XAG-bJ-qyt">
+            <objects>
+                <viewController id="vf3-sv-Qns" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SZg-Sq-3E1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="M5Z-Sa-OrY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8m6-BE-Sfi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TBs-pg-V3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1647" y="691"/>
         </scene>
         <!--Check Ins Table View Controller - Previous Check-Ins-->
         <scene sceneID="ZH8-gk-8sr">
@@ -207,7 +234,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZaO-2j-OIE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1637" y="800"/>
+            <point key="canvasLocation" x="1647" y="14"/>
         </scene>
         <!--Check In Table View Controller - New Check-In-->
         <scene sceneID="cI7-OM-Kgm">
@@ -248,7 +275,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fuI-ry-UgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1637" y="14"/>
+            <point key="canvasLocation" x="1647" y="-648"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="8t3-4K-oUE">
@@ -391,6 +418,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZJI-JS-tbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="148" y="370"/>
+        </scene>
+        <!--Map Location View Controller-->
+        <scene sceneID="EHu-em-JC1">
+            <objects>
+                <viewController id="N6z-8P-T6L" customClass="RWMapLocationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aqV-BN-ZHf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="VKN-XE-6JD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="N6z-8P-T6L" id="Bvr-jX-ZSK"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="y52-BT-jqO"/>
+                    <connections>
+                        <outlet property="mapView" destination="VKN-XE-6JD" id="sk0-hy-DSx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9hk-0L-eo3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1647" y="1362"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

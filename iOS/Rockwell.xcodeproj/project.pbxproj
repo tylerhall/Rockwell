@@ -33,6 +33,8 @@
 		C6DBFBA118FADA86001CDB3A /* RWCheckInTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DBFBA018FADA86001CDB3A /* RWCheckInTableViewController.m */; };
 		C6DBFBA418FADA9D001CDB3A /* RWCheckInsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DBFBA318FADA9D001CDB3A /* RWCheckInsTableViewController.m */; };
 		C6DBFBA718FAE01F001CDB3A /* RWCheckInTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DBFBA618FAE01F001CDB3A /* RWCheckInTableViewCell.m */; };
+		C6E022B918FAE8D5005BE351 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E022B818FAE8D5005BE351 /* MapKit.framework */; };
+		C6E022BC18FAE974005BE351 /* RWMapLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E022BB18FAE974005BE351 /* RWMapLocationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +86,9 @@
 		C6DBFBA318FADA9D001CDB3A /* RWCheckInsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWCheckInsTableViewController.m; sourceTree = "<group>"; };
 		C6DBFBA518FAE01F001CDB3A /* RWCheckInTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWCheckInTableViewCell.h; sourceTree = "<group>"; };
 		C6DBFBA618FAE01F001CDB3A /* RWCheckInTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWCheckInTableViewCell.m; sourceTree = "<group>"; };
+		C6E022B818FAE8D5005BE351 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C6E022BA18FAE974005BE351 /* RWMapLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWMapLocationViewController.h; sourceTree = "<group>"; };
+		C6E022BB18FAE974005BE351 /* RWMapLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWMapLocationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6E022B918FAE8D5005BE351 /* MapKit.framework in Frameworks */,
 				C604C287168C202500FD2CE0 /* UIKit.framework in Frameworks */,
 				C604C289168C202500FD2CE0 /* Foundation.framework in Frameworks */,
 				C604C28B168C202500FD2CE0 /* CoreGraphics.framework in Frameworks */,
@@ -127,6 +133,7 @@
 		C604C285168C202500FD2CE0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C6E022B818FAE8D5005BE351 /* MapKit.framework */,
 				C604C2F7168C22B700FD2CE0 /* CoreLocation.framework */,
 				C604C286168C202500FD2CE0 /* UIKit.framework */,
 				C604C288168C202500FD2CE0 /* Foundation.framework */,
@@ -235,6 +242,8 @@
 				C6DBFBA018FADA86001CDB3A /* RWCheckInTableViewController.m */,
 				C6DBFBA218FADA9D001CDB3A /* RWCheckInsTableViewController.h */,
 				C6DBFBA318FADA9D001CDB3A /* RWCheckInsTableViewController.m */,
+				C6E022BA18FAE974005BE351 /* RWMapLocationViewController.h */,
+				C6E022BB18FAE974005BE351 /* RWMapLocationViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -336,6 +345,7 @@
 				C604C2D2168C219B00FD2CE0 /* main.m in Sources */,
 				C604C2E7168C21A600FD2CE0 /* LocationManager.m in Sources */,
 				C6DBFBA718FAE01F001CDB3A /* RWCheckInTableViewCell.m in Sources */,
+				C6E022BC18FAE974005BE351 /* RWMapLocationViewController.m in Sources */,
 				C604C2E8168C21A600FD2CE0 /* RWAppDelegate.m in Sources */,
 				C604C2FC168C231A00FD2CE0 /* RWLoginViewController.m in Sources */,
 				C604C2FF168C233100FD2CE0 /* RWMainViewController.m in Sources */,
