@@ -21,6 +21,8 @@
 
 	<p>You are logged in as <?PHP echo $Auth->username;?>. <a href="logout.php">Logout</a>.</p>
 
+	<h2><a href="checkin.php">Check-in</a> or <a href="view.php">View Check-ins</a></h2>
+
 	<h2>Search Your Location History</h2>
 	<ul>
 		<li><a href="search-date.php">Search by Date</a></li>

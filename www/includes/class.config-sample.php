@@ -38,7 +38,11 @@
 
         // Add your config options here...
         public $useDBSessions; // Set to true to store sessions in the database
-		public $googleMapsKey;
+	public $googleMapsKey;
+
+		// Your Foursquare App info...
+	public $fsClientID = '';
+	public $fsClientSecret = '';
 
         // Singleton constructor
         private function __construct()

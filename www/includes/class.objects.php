@@ -5,7 +5,7 @@
     {
         public function __construct($id = null)
         {
-            parent::__construct('users', array('nid', 'username', 'password', 'level', 'token'), $id);
+            parent::__construct('users', array('nid', 'username', 'password', 'level', 'token', 'tz_offset'), $id);
         }
     }
 
@@ -13,7 +13,7 @@
     {
         public function __construct($id = null)
         {
-            parent::__construct('updates', array('user_id', 'dt', 'latitude', 'longitude'), $id);
+            parent::__construct('updates', array('user_id', 'dt', 'latitude', 'longitude', 'fs_id', 'fs_name'), $id);
         }
     }
 

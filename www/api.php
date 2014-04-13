@@ -30,7 +30,7 @@
 		$u->user_id = $Auth->id;
 		$u->dt = gmdate('Y-m-d H:i:s');
 		$u->latitude = $_GET['latitude'];
-		$u->longitude = $_GET['longitude'];
+		$u->longitude = $_GET['longitude'];		
 		$u->insert();
 		echo json_encode(array('result' => 'success'));	
 	}
