@@ -91,7 +91,7 @@
         }
         
         if(failed) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Could Not Login" message:@"An error occurred. Please double-check your username, password, and URL." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Could Not Login" message:@"An error occurred. Please double-check your username, password, and URL." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alert show];
         }
     }];

@@ -30,6 +30,9 @@
 		C604C2FF168C233100FD2CE0 /* RWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C604C2FE168C233100FD2CE0 /* RWMainViewController.m */; };
 		C6A93A0916901FAB0072502C /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A93A0816901FAB0072502C /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C6A93A17169020B90072502C /* NetworkSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A93A16169020B90072502C /* NetworkSpinner.m */; };
+		C6DBFBA118FADA86001CDB3A /* RWCheckInTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DBFBA018FADA86001CDB3A /* RWCheckInTableViewController.m */; };
+		C6DBFBA418FADA9D001CDB3A /* RWCheckInsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DBFBA318FADA9D001CDB3A /* RWCheckInsTableViewController.m */; };
+		C6DBFBA718FAE01F001CDB3A /* RWCheckInTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DBFBA618FAE01F001CDB3A /* RWCheckInTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +78,12 @@
 		C6A93A0816901FAB0072502C /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
 		C6A93A15169020B90072502C /* NetworkSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkSpinner.h; sourceTree = "<group>"; };
 		C6A93A16169020B90072502C /* NetworkSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkSpinner.m; sourceTree = "<group>"; };
+		C6DBFB9F18FADA86001CDB3A /* RWCheckInTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWCheckInTableViewController.h; sourceTree = "<group>"; };
+		C6DBFBA018FADA86001CDB3A /* RWCheckInTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWCheckInTableViewController.m; sourceTree = "<group>"; };
+		C6DBFBA218FADA9D001CDB3A /* RWCheckInsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWCheckInsTableViewController.h; sourceTree = "<group>"; };
+		C6DBFBA318FADA9D001CDB3A /* RWCheckInsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWCheckInsTableViewController.m; sourceTree = "<group>"; };
+		C6DBFBA518FAE01F001CDB3A /* RWCheckInTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWCheckInTableViewCell.h; sourceTree = "<group>"; };
+		C6DBFBA618FAE01F001CDB3A /* RWCheckInTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWCheckInTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +218,8 @@
 		C604C2E9168C21AB00FD2CE0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C6DBFBA518FAE01F001CDB3A /* RWCheckInTableViewCell.h */,
+				C6DBFBA618FAE01F001CDB3A /* RWCheckInTableViewCell.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -220,6 +231,10 @@
 				C604C2FB168C231A00FD2CE0 /* RWLoginViewController.m */,
 				C604C2FD168C233100FD2CE0 /* RWMainViewController.h */,
 				C604C2FE168C233100FD2CE0 /* RWMainViewController.m */,
+				C6DBFB9F18FADA86001CDB3A /* RWCheckInTableViewController.h */,
+				C6DBFBA018FADA86001CDB3A /* RWCheckInTableViewController.m */,
+				C6DBFBA218FADA9D001CDB3A /* RWCheckInsTableViewController.h */,
+				C6DBFBA318FADA9D001CDB3A /* RWCheckInsTableViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -320,11 +335,14 @@
 				C604C2CD168C218200FD2CE0 /* TPKeyboardAvoidingTableView.m in Sources */,
 				C604C2D2168C219B00FD2CE0 /* main.m in Sources */,
 				C604C2E7168C21A600FD2CE0 /* LocationManager.m in Sources */,
+				C6DBFBA718FAE01F001CDB3A /* RWCheckInTableViewCell.m in Sources */,
 				C604C2E8168C21A600FD2CE0 /* RWAppDelegate.m in Sources */,
 				C604C2FC168C231A00FD2CE0 /* RWLoginViewController.m in Sources */,
 				C604C2FF168C233100FD2CE0 /* RWMainViewController.m in Sources */,
 				C6A93A0916901FAB0072502C /* GTMHTTPFetcher.m in Sources */,
+				C6DBFBA118FADA86001CDB3A /* RWCheckInTableViewController.m in Sources */,
 				C6A93A17169020B90072502C /* NetworkSpinner.m in Sources */,
+				C6DBFBA418FADA9D001CDB3A /* RWCheckInsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
